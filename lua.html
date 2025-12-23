@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lua e Estrelas</title>
+<style>
+/* Reset */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(ellipse at top, #0b0b2a 0%, #000 80%);
+  font-family: sans-serif;
+  color: #ffeaa7;
+  overflow: hidden;
+  text-align: center;
+  padding: 2vmin;
+  position: relative;
+}
+
+/* Lua */
+.moon {
+  position: absolute;
+  top: 10%;
+  right: 15%;
+  width: 10vmin;
+  height: 10vmin;
+  background: radial-gradient(circle, #fff 0%, #ddd 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 20px #fff;
+  z-index: 1;
+}
+
+/* Estrelas */
+.star {
+  position: absolute;
+  width: 0.5vmin;
+  height: 0.5vmin;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 5px #fff;
+  animation: twinkle 2s infinite alternate;
+  z-index: 1;
+}
+
+/* Mais estrelas */
+.star:nth-child(1){top:5%; left:10%;}
+.star:nth-child(2){top:15%; left:70%;}
+.star:nth-child(3){top:25%; left:30%;}
+.star:nth-child(4){top:35%; left:80%;}
+.star:nth-child(5){top:45%; left:50%;}
+.star:nth-child(6){top:55%; left:20%;}
+.star:nth-child(7){top:65%; left:75%;}
+.star:nth-child(8){top:75%; left:40%;}
+.star:nth-child(9){top:85%; left:60%;}
+.star:nth-child(10){top:90%; left:15%;}
+
+@keyframes twinkle {
+  0% { opacity: 0.3; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+  100% { opacity: 0.3; transform: scale(0.8); }
+}
+
+/* Texto central */
+.center-text {
+  font-size: 3vmin;
+  color: #ffd6aa;
+  text-shadow: 0 0 10px #fff;
+  z-index: 2;
+  max-width: 80%;
+  margin-bottom: 3vmin; /* Espaço abaixo da frase para o botão */
+}
+
+/* Botão de fechar Lua */
+#fecharLua {
+  display: inline-block;        /* mantém o botão em linha com o conteúdo */
+  margin: 2vmin auto 0 auto;    /* centraliza horizontalmente e dá espaço acima */
+  padding: 0.6em 1.2em;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffeaa7;               /* cor do texto */
+  background: rgba(255, 255, 255, 0.05); /* fundo transparente suave */
+  border: 2px solid #ffeaa7;    /* borda dourada */
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+/* Hover / efeito ao passar o mouse */
+#fecharLua:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.5);
+}
+
+
+</style>
+</head>
+<body>
+
+<!-- Lua -->
+<div class="moon"></div>
+
+<!-- Estrelas -->
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+
+<!-- Frase central -->
+<div class="center-text">
+"Sob o brilho suave da lua e o cintilar de milhares de estrelas, meu amor por você cresce a cada instante, iluminando nossos sonhos e tornando cada momento juntos mágico, eterno e inesquecível."
+</div>
+
+</body>
+</html>
